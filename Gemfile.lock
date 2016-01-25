@@ -1,11 +1,21 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    gitlab (3.6.1)
+      httparty
+      terminal-table
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.3)
+    multi_xml (0.5.5)
+    terminal-table (1.5.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  gitlab
 
 BUNDLED WITH
    1.11.2
