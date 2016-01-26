@@ -9,6 +9,7 @@ GEM
       multi_xml (>= 0.5.2)
     json (1.8.3)
     multi_xml (0.5.5)
+    slop (4.2.1)
     terminal-table (1.5.2)
 
 PLATFORMS
@@ -16,6 +17,7 @@ PLATFORMS
 
 DEPENDENCIES
   gitlab
+  slop
 
 BUNDLED WITH
    1.11.2
