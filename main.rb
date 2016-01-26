@@ -1,5 +1,5 @@
 require 'slop'
-require 'gitlab'
+require_relative 'gitlab_client'
 
 opts = Slop.parse do |o|
   o.string '-u', '--url', 'Project API URL'
@@ -11,10 +11,6 @@ opts = Slop.parse do |o|
   end
 end
 
-Gitlab.endpoint = opts[:url]
-Gitlab.private_token = opts[:token]
 
-projects = Gitlab.project_search(opts[:project])
-if projects.count == 0
-  raise ArgumentError, 'Project not found.'
-end
+client = GitlabClient.new(opts[:url], opts[:token], opts[:project])
+client.generate_changelog()
